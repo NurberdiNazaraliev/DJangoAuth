@@ -1,0 +1,11 @@
+Hello {{ user.username }},
+
+Thank you for signing up for our service! Before you can start using your account, we need to verify your email address.
+
+Please click the following link to verify your email:
+{{ verification_link }}
+
+If you didn't create an account with us, you can safely ignore this email.
+
+Thank you,
+Your Service Team
