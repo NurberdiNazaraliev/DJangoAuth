@@ -146,17 +146,18 @@ REST_FRAMEWORK = {
 
 ####Emailsets
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get('EMAIL_HOST'),
-EMAIL_FROM = os.environ.get('EMAIL_FROM'),
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER'),
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD'),
-EMAIL_PORT = os.environ.get('EMAIL_PORT'),
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')== 'True',
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_FROM = os.environ.get('EMAIL_FROM')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', True)
 
 PASSWORD_RESET_TIMEOUT = 14400
 
 SWAGGER_SETTINGS = {
     'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg.inspectors.SwaggerAutoSchema',
 }
+
 
