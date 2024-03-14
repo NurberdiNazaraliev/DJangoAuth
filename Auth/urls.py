@@ -10,4 +10,5 @@ urlpatterns = [
     path('verify/<str:uidb64>/<str:token>/', verify_email, name='verify_email'),
     path('send-verification-email-again/', send_verification_email_again, name='send_verification_email_again'),
 
+
 ]

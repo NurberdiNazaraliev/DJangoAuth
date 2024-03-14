@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Auth',
     'rest_framework',
     'rest_framework.authtoken',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -155,5 +156,7 @@ EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')== 'True',
 
 PASSWORD_RESET_TIMEOUT = 14400
 
-
+SWAGGER_SETTINGS = {
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg.inspectors.SwaggerAutoSchema',
+}
 

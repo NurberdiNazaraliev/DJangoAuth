@@ -53,6 +53,22 @@ from rest_framework.authtoken.models import Token
 
 # Assuming `user` is the user object for which you want to generate a token
 class SignupView(generics.CreateAPIView):
+    """
+       Signup View
+
+       This view allows users to sign up by creating a new user account.
+
+       ---
+       # Request Body
+
+       - username: The username for the new user (string, required)
+       - email: The email address for the new user (string, required)
+       - password: The password for the new user (string, required)
+
+       # Response
+
+       Returns the newly created user object.
+    """
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
