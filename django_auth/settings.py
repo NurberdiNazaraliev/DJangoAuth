@@ -32,6 +32,8 @@ import os
 env = environ.Env()
 environ.Env.read_env()
 
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
+                        'http://localhost:8000', 'https://www.marina-backender.org.kg', 'www.marina-backender.org.kg']
 # Application definition
 
 INSTALLED_APPS = [
